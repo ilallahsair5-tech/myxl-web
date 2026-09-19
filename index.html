@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dual Space myXL Web</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      text-align: center;
+      margin: 0;
+      padding: 15px;
+    }
+    .btn-group {
+      margin-bottom: 15px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 3px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover { background-color: #0056b3; }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .card {
+      background: #1e1e1e;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+    iframe {
+      border: none;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Web Dual Space myXL</h2>
+  
+  <!-- Tombol Rotasi Server Appetize (Total 300 Menit) -->
+  <div class="btn-group">
+    <span>Pilih Server: </span>
+    <button onclick="switchServer('https://appetize.io/embed/b_wlzvg2zx6priwtqiq4yztttwyi')">Server 1 (100m)</button>
+    <button onclick="switchServer('KEY_SERVER_2')">Server 2 (100m)</button>
+    <button onclick="switchServer('KEY_SERVER_3')">Server 3 (100m)</button>
+  </div>
+
+  <div class="container">
+    <!-- Slot myXL Utama (Kapasitas 10 Nomor) -->
+    <div class="card">
+      <h4>myXL - Slot 1</h4>
+      <iframe id="app1" src="https://appetize.io/embed/https://appetize.io/embed/b_wlzvg2zx6priwtqiq4yztttwyi?device=nexus5&scale=65" width="260" height="520"></iframe>
+    </div>
+
+    <!-- Slot myXL Kloning (Kapasitas 10 Nomor) -->
+    <div class="card">
+      <h4>myXL - Slot 2</h4>
+      <iframe id="app2" src="https://appetize.io/embed/https://appetize.io/embed/b_wlzvg2zx6priwtqiq4yztttwyi?device=nexus5&scale=65" width="260" height="520"></iframe>
+    </div>
+  </div>
+
+  <script>
+    function switchServer(publicKey) {
+      document.getElementById('app1').src = "https://appetize.io/embed/" + publicKey + "?device=nexus5&scale=65";
+      document.getElementById('app2').src = "https://appetize.io/embed/" + publicKey + "?device=nexus5&scale=65";
+      alert("Berhasil berpindah server Appetize!");
+    }
+  </script>
+
+</body>
+</html>
