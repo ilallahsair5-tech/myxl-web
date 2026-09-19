@@ -1,88 +1,84 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dual Space myXL Web</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #ffffff;
-      text-align: center;
-      margin: 0;
-      padding: 15px;
-    }
-    .btn-group {
-      margin-bottom: 15px;
-    }
-    button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      margin: 3px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    button:hover { background-color: #0056b3; }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-    .card {
-      background: #1e1e1e;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    }
-    iframe {
-      border: none;
-      border-radius: 8px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dual Space myXL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .btn-group {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn-server {
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 5px;
+            display: inline-block;
+            transition: background-color 0.2s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .btn-server:hover {
+            background-color: #0056b3;
+        }
+
+        .info-card {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+        }
+
+        .info-card h4 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        .info-card p {
+            font-size: 14px;
+            color: #ccc;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
 
-  <h2>Web Dual Space myXL</h2>
-  
-  <!-- Tombol Rotasi Server Appetize (Total 300 Menit) -->
-  <div style="text-align: center; margin-bottom: 20px;">
-  <a href="https://appetize.io/app/b_3hqtdqgx7frucwfhd6qdzkjoia" target="_blank" class="btn btn-primary" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; margin: 5px; display: inline-block;">
-    Server 1 (100m)
-  </a>
-  <a href="https://appetize.io/app/b_3hqtdqgx7frucwfhd6qdzkjoia" target="_blank" class="btn btn-primary" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; margin: 5px; display: inline-block;">
-    Server 2 (100m)
-  </a>
-  <a href="https://appetize.io/app/b_3hqtdqgx7frucwfhd6qdzkjoia" target="_blank" class="btn btn-primary" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; margin: 5px; display: inline-block;">
-    Server 3 (100m)
-  </a>
-</div>
+    <h2>Web Dual Space myXL</h2>
 
-  <div class="container">
-    <!-- Slot myXL Utama (Kapasitas 10 Nomor) -->
-    <div class="card">
-      <h4>myXL - Slot 1</h4>
-      <iframe id="app1" src="https://appetize.io/embed/b_3hqtdqgx7frucwfhd6qdzkjoia?device=nexus5&scale=65" width="260" height="520"></iframe>
+    <!-- Tombol Server Link Langsung Appetize -->
+    <div class="btn-group">
+        <span style="display: block; margin-bottom: 12px; font-weight: bold; font-size: 16px;">Pilih Server untuk Membuka myXL:</span>
+        <a href="https://appetize.io/app/b_3hqtdqgx7frucwfhd6qdzkjoia" target="_blank" class="btn-server">Server 1 (100m)</a>
+        <a href="https://appetize.io/app/b_3hqtdqgx7frucwfhd6qdzkjoia" target="_blank" class="btn-server">Server 2 (100m)</a>
+        <a href="https://appetize.io/app/b_3hqtdqgx7frucwfhd6qdzkjoia" target="_blank" class="btn-server">Server 3 (100m)</a>
     </div>
 
-    <!-- Slot myXL Kloning (Kapasitas 10 Nomor) -->
-    <div class="card">
-      <h4>myXL - Slot 2</h4>
-      <iframe id="app2" src="https://appetize.io/embed/https://https://appetize.io/embed/b_3hqtdqgx7frucwfhd6qdzkjoia?device=nexus5&scale=65" width="260" height="520"></iframe>
+    <!-- Informasi Penggunaan -->
+    <div class="info-card">
+        <h4>Petunjuk Penggunaan</h4>
+        <p>Klik salah satu tombol server di atas untuk menjalankan emulator aplikasi myXL langsung di tab baru browser kamu secara cepat dan lancar tanpa kendala pemblokiran sematan.</p>
     </div>
-  </div>
-
-  <script>
-    function switchServer(publicKey) {
-      document.getElementById('app1').src = "https://appetize.io/embed/" + publicKey + "?device=nexus5&scale=65";
-      document.getElementById('app2').src = "https://appetize.io/embed/" + publicKey + "?device=nexus5&scale=65";
-      alert("Berhasil berpindah server Appetize!");
-    }
-  </script>
 
 </body>
 </html>
